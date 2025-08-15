@@ -12,7 +12,7 @@ glueContext = GlueContext(sc)
 spark = glueContext.spark_session
 job = Job(glueContext)
 job.init(args['JOB_NAME'], args)
-customer_df = spark.read.parquet("s3://capstarget/temp/")
+customer_df = spark.read.parquet("s3://capstoneproject_Harshath/target/temp/")
 transactions_dyf = glueContext.create_dynamic_frame.from_catalog(
     database="capstonedb",
     table_name="transactionsrc"
