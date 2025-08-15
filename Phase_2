@@ -20,6 +20,6 @@ customers_df = customers_df.dropDuplicates(["customer_id"])
  
 customers_df = customers_df.filter(customers_df.email.isNotNull() & customers_df.zip_code.isNotNull())
  
-customers_df.write.mode("overwrite").parquet("s3://capstoneproj06/target/temp/")
+customers_df.write.mode("overwrite").parquet("s3://capstoneproject_Harshath/target/temp/")
  
 job.commit()
